@@ -14,9 +14,9 @@
       },
       "Fields": [
         {
-          "FieldId": "NoGroup.NoCategory.Productupdates.Attendees",
-          "FieldName": "Attendees",
-          "IsMultiValue": true,
+          "FieldId": "NoGroup.NoCategory.Productupdates.MobileDevelopmentPilotNucamp",
+          "FieldName": "Mobile Development Pilot: Nucamp",
+          "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
@@ -24,11 +24,11 @@
           "Metadata": [
             {
               "Key": "Color",
-              "Value": "#038a18"
+              "Value": "#b37710"
             },
             {
               "Key": "Hotkey",
-              "Value": "a"
+              "Value": "l"
             }
           ],
           "RuleSet": null,
@@ -36,9 +36,9 @@
           "DataSource": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.Productupdates.Agenda",
-          "FieldName": "Agenda",
-          "IsMultiValue": true,
+          "FieldId": "NoGroup.NoCategory.Productupdates.Cybersecurity",
+          "FieldName": "Cybersecurity",
+          "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
           "Components": [],
@@ -46,51 +46,7 @@
           "Metadata": [
             {
               "Key": "Color",
-              "Value": "#d2d550"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "g"
-            }
-          ],
-          "RuleSet": null,
-          "DefaultValue": "",
-          "DataSource": null
-        },
-        {
-          "FieldId": "NoGroup.NoCategory.Productupdates.Notes",
-          "FieldName": "Notes",
-          "IsMultiValue": true,
-          "Type": "Text",
-          "DeriveFieldsFormat": "",
-          "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#fa6616"
-            },
-            {
-              "Key": "Hotkey",
-              "Value": "e"
-            }
-          ],
-          "RuleSet": null,
-          "DefaultValue": "",
-          "DataSource": null
-        },
-        {
-          "FieldId": "NoGroup.NoCategory.Productupdates.ActionItem",
-          "FieldName": "Action Items",
-          "IsMultiValue": true,
-          "Type": "Text",
-          "DeriveFieldsFormat": "",
-          "Components": [],
-          "SetValues": [],
-          "Metadata": [
-            {
-              "Key": "Color",
-              "Value": "#8a97a0"
+              "Value": "#279aab"
             },
             {
               "Key": "Hotkey",
@@ -102,8 +58,8 @@
           "DataSource": null
         },
         {
-          "FieldId": "NoGroup.NoCategory.Productupdates.NextMeetingAgenda",
-          "FieldName": "Next Meeting Agenda",
+          "FieldId": "NoGroup.NoCategory.Productupdates.Mini-Apps",
+          "FieldName": "Mini-Apps",
           "IsMultiValue": false,
           "Type": "Text",
           "DeriveFieldsFormat": "",
@@ -112,11 +68,363 @@
           "Metadata": [
             {
               "Key": "Color",
-              "Value": "#6eb84a"
+              "Value": "#661595"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "m"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Soft-Skills",
+          "FieldName": "Soft-Skills",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#fda891"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "k"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Q1_2024",
+          "FieldName": "Q1_2024",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#4c38f3"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "1"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Ssoft_skills_Strategy-linkendIn",
+          "FieldName": "Soft_skills_Strategy-linkendIn",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5fcfb9"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "r"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Strategy_pilot",
+          "FieldName": "Strategy_pilot",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#27dc6a"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "a"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Strategy_1-roadmap",
+          "FieldName": "Strategy_1-roadmap",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#857c60"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "e"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Strategy_2-grade_weighting",
+          "FieldName": "Strategy_2-grade_weighting",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c69289"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "g"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Skills_&_employability",
+          "FieldName": "Skills_&_employability",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#22e5eb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "&"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Learnings",
+          "FieldName": "Learnings",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#b5b8aa"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "q"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.LaunchoftheSDMobileCourse",
+          "FieldName": "Launch of the SD Mobile Course",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#15bedb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "h"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Mpesa_Africa_Mini_Apps_Delivery",
+          "FieldName": "Mpesa_Africa_Mini_Apps_Delivery",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#74a46b"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "v"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Product_planning",
+          "FieldName": "Product_planning",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#27dfdb"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "w"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.AI",
+          "FieldName": "AI",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#5465fd"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "y"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Data_analytics",
+          "FieldName": "Data_analytics",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#ef22d4"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "j"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Digital_marketing",
+          "FieldName": "Digital_marketing ",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#c074aa"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "z"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Product_Management",
+          "FieldName": "Product_Management",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#d248a7"
             },
             {
               "Key": "Hotkey",
               "Value": "x"
+            }
+          ],
+          "RuleSet": null,
+          "DefaultValue": "",
+          "DataSource": null
+        },
+        {
+          "FieldId": "NoGroup.NoCategory.Productupdates.Analyst",
+          "FieldName": "Analyst",
+          "IsMultiValue": false,
+          "Type": "Text",
+          "DeriveFieldsFormat": "",
+          "Components": [],
+          "SetValues": [],
+          "Metadata": [
+            {
+              "Key": "Color",
+              "Value": "#9332af"
+            },
+            {
+              "Key": "Hotkey",
+              "Value": "2"
             }
           ],
           "RuleSet": null,
