@@ -1,4 +1,4 @@
-<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap:VirtualizedContainerService.HintSize="1153.3333333333333,7784.666666666667" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<Activity mc:Ignorable="sap sap2010" x:Class="Main" VisualBasic.Settings="{x:Null}" sap2010:Annotation.AnnotationText="UPTF00000088eyI8SGVscExpbms+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8SW5pdGlhbFRvb2x0aXA+a19fQmFja2luZ0ZpZWxkIjpudWxsLCI8VmVyc2lvbj5rX19CYWNraW5nRmllbGQiOjF9" sap:VirtualizedContainerService.HintSize="960,9654" sap2010:WorkflowViewState.IdRef="ActivityBuilder_1" xmlns="http://schemas.microsoft.com/netfx/2009/xaml/activities" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:p="http://schemas.uipath.com/workflow/activities/intelligentocr" xmlns:p1="http://schemas.uipath.com/workflow/activities/ocr" xmlns:p2="http://schemas.uipath.com/workflow/activities/intelligentocr/classification" xmlns:p3="http://schemas.uipath.com/workflow/activities/document-processing-contracts/classification" xmlns:p4="http://schemas.uipath.com/workflow/activities/document-processing-contracts/dom" xmlns:p5="http://schemas.uipath.com/workflow/activities/intelligentocr/extraction" xmlns:p6="http://schemas.uipath.com/workflow/activities/document-processing-contracts/extraction" xmlns:p7="http://schemas.uipath.com/workflow/activities/document-processing-contracts/results" xmlns:p8="http://schemas.uipath.com/workflow/activities/document-processing-contracts/taxonomy" xmlns:sap="http://schemas.microsoft.com/netfx/2009/xaml/activities/presentation" xmlns:sap2010="http://schemas.microsoft.com/netfx/2010/xaml/activities/presentation" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:sco="clr-namespace:System.Collections.ObjectModel;assembly=System.Private.CoreLib" xmlns:sd="clr-namespace:System.Drawing;assembly=System.Drawing.Common" xmlns:sd1="clr-namespace:System.Drawing;assembly=System.Drawing.Primitives" xmlns:sd2="clr-namespace:System.Data;assembly=System.Data.Common" xmlns:ss="clr-namespace:System.Security;assembly=System.Private.CoreLib" xmlns:ue="clr-namespace:UiPath.Excel;assembly=UiPath.Excel.Activities" xmlns:ueab="clr-namespace:UiPath.Excel.Activities.Business;assembly=UiPath.Excel.Activities" xmlns:uga="clr-namespace:UiPath.GSuite.Activities;assembly=UiPath.GSuite.Activities" xmlns:ugade="clr-namespace:UiPath.GSuite.Activities.Drive.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugage="clr-namespace:UiPath.GSuite.Activities.Gmail.Enums;assembly=UiPath.GSuite.Activities" xmlns:ugdm="clr-namespace:UiPath.GSuite.Drive.Models;assembly=UiPath.GSuite" xmlns:ui="http://schemas.uipath.com/workflow/activities" xmlns:upr="clr-namespace:UiPath.Platform.ResourceHandling;assembly=UiPath.Platform" xmlns:usau="clr-namespace:UiPath.Shared.Activities.Utils;assembly=UiPath.GSuite.Activities" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
       <x:String>System.Activities</x:String>
@@ -77,6 +77,7 @@
       <x:String>UiPath.Excel.Model</x:String>
       <x:String>UiPath.Excel.Activities.Business</x:String>
       <x:String>UiPath.Shared.Activities.Business</x:String>
+      <x:String>System.Linq.Expressions</x:String>
     </sco:Collection>
   </TextExpression.NamespacesForImplementation>
   <TextExpression.ReferencesForImplementation>
@@ -157,15 +158,17 @@
       <AssemblyReference>System.Runtime.InteropServices</AssemblyReference>
       <AssemblyReference>System.Linq.Async</AssemblyReference>
       <AssemblyReference>System.Collections</AssemblyReference>
+      <AssemblyReference>System.Collections.NonGeneric</AssemblyReference>
+      <AssemblyReference>System.Linq.Expressions</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence sap:VirtualizedContainerService.HintSize="846,7720" sap2010:WorkflowViewState.IdRef="Sequence_22">
+  <Sequence sap:VirtualizedContainerService.HintSize="846,9589" sap2010:WorkflowViewState.IdRef="Sequence_22">
     <sap:WorkflowViewStateService.ViewState>
       <scg:Dictionary x:TypeArguments="x:String, x:Object">
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="784,7609.333333333333" sap2010:WorkflowViewState.IdRef="Sequence_23">
+    <Sequence DisplayName="Main Sequence" sap:VirtualizedContainerService.HintSize="784,9501" sap2010:WorkflowViewState.IdRef="Sequence_23">
       <Sequence.Variables>
         <Variable x:TypeArguments="x:String" Name="ProductSync" />
         <Variable x:TypeArguments="x:String" Name="out_ProductSync" />
@@ -175,9 +178,9 @@
         <Variable x:TypeArguments="ugdm:GDriveLocalItem" Name="Meeting_notes" />
         <Variable x:TypeArguments="x:String" Name="document_text" />
         <Variable x:TypeArguments="p4:Document" Name="DOM" />
-        <Variable x:TypeArguments="p6:ClassificationResult[]" Name="classificationResult" />
-        <Variable x:TypeArguments="p6:ExtractionResult" Name="extractionResults" />
-        <Variable x:TypeArguments="p6:ExtractionResult" Name="validatedExtractionResults" />
+        <Variable x:TypeArguments="p7:ClassificationResult[]" Name="classificationResult" />
+        <Variable x:TypeArguments="p7:ExtractionResult" Name="extractionResults" />
+        <Variable x:TypeArguments="p7:ExtractionResult" Name="validatedExtractionResults" />
         <Variable x:TypeArguments="sd2:DataSet" Name="dataSet" />
         <Variable x:TypeArguments="sd2:DataTable" Name="DT1" />
         <Variable x:TypeArguments="x:String" Name="EmailTemplate" />
@@ -200,8 +203,8 @@
           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
         </scg:Dictionary>
       </sap:WorkflowViewStateService.ViewState>
-      <ui:BuildDataTable DataTable="[DT1]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="722,60" sap2010:WorkflowViewState.IdRef="BuildDataTable_2" TableInfo="&lt;NewDataSet&gt;&#xD;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xD;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xD;&#xA;      &lt;xs:complexType&gt;&#xD;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xD;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xD;&#xA;            &lt;xs:complexType&gt;&#xD;&#xA;              &lt;xs:sequence&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Cybersecurity&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Mini-Apps&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Soft-Skills&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Q1_2024&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Soft_skills_Strategy-linkendIn&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xD;&#xA;                  &lt;xs:simpleType&gt;&#xD;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xD;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xD;&#xA;                    &lt;/xs:restriction&gt;&#xD;&#xA;                  &lt;/xs:simpleType&gt;&#xD;&#xA;                &lt;/xs:element&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Strategy_pilot&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Strategy_1-roadmap&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Strategy_2-grade_weighting&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Skills__x0026__employability&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Learnings&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Mobile_x0020_Development_x0020_Pilot_x003A__x0020_Nucamp&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Launch_x0020_of_x0020_the_x0020_SD_x0020_Mobile_x0020_Course&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Mpesa_Africa_Mini_Apps_Delivery&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product_planning&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;AI&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Data_analytics&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Digital_marketing_x0020_&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Product_Management&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;                &lt;xs:element name=&quot;Analyst&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xD;&#xA;              &lt;/xs:sequence&gt;&#xD;&#xA;            &lt;/xs:complexType&gt;&#xD;&#xA;          &lt;/xs:element&gt;&#xD;&#xA;        &lt;/xs:choice&gt;&#xD;&#xA;      &lt;/xs:complexType&gt;&#xD;&#xA;    &lt;/xs:element&gt;&#xD;&#xA;  &lt;/xs:schema&gt;&#xD;&#xA;&lt;/NewDataSet&gt;" />
-      <uga:DownloadFileConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" ManualEntryFileId="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowserFileId="https://docs.google.com/document/d/1Uh8RjXDZSiSr8u0GvzgdDFdz2YNdT6EJooldgQTuif0/edit?usp=drivesdk" ConnectionId="bc98d803-28b7-4503-8d07-94422c8009dd" DisplayName="Download File" DownloadDocumentAs="[UiPath.GSuite.Activities.Drive.Enums.EGDocExportFormat.Pdf]" DownloadDrawingAs="Jpeg" DownloadPresentationAs="Ppt" DownloadSpreadsheetAs="Xlsx" FileFriendlyName="Product Team Updates" FileInputMode="Browse" sap:VirtualizedContainerService.HintSize="722,154.66666666666666" sap2010:WorkflowViewState.IdRef="DownloadFileConnections_4" NewResult="[Meeting_notes]" UseConnectionService="True">
+      <ui:BuildDataTable DataTable="[DT1]" DisplayName="Build Data Table" sap:VirtualizedContainerService.HintSize="722,100" sap2010:WorkflowViewState.IdRef="BuildDataTable_3" TableInfo="&lt;NewDataSet&gt;&#xA;  &lt;xs:schema id=&quot;NewDataSet&quot; xmlns=&quot;&quot; xmlns:xs=&quot;http://www.w3.org/2001/XMLSchema&quot; xmlns:msdata=&quot;urn:schemas-microsoft-com:xml-msdata&quot;&gt;&#xA;    &lt;xs:element name=&quot;NewDataSet&quot; msdata:IsDataSet=&quot;true&quot; msdata:MainDataTable=&quot;TableName&quot; msdata:UseCurrentLocale=&quot;true&quot;&gt;&#xA;      &lt;xs:complexType&gt;&#xA;        &lt;xs:choice minOccurs=&quot;0&quot; maxOccurs=&quot;unbounded&quot;&gt;&#xA;          &lt;xs:element name=&quot;TableName&quot;&gt;&#xA;            &lt;xs:complexType&gt;&#xA;              &lt;xs:sequence&gt;&#xA;                &lt;xs:element name=&quot;SD_Flatiron&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Skills_pathway&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;SD_mobile&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Mpesa_mini_apps&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;Soft_skills&quot; msdata:Caption=&quot;&quot; minOccurs=&quot;0&quot;&gt;&#xA;                  &lt;xs:simpleType&gt;&#xA;                    &lt;xs:restriction base=&quot;xs:string&quot;&gt;&#xA;                      &lt;xs:maxLength value=&quot;100000&quot; /&gt;&#xA;                    &lt;/xs:restriction&gt;&#xA;                  &lt;/xs:simpleType&gt;&#xA;                &lt;/xs:element&gt;&#xA;                &lt;xs:element name=&quot;DS_updates&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cybersec_prep&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Cybersec_analyst&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Data_analytics&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;                &lt;xs:element name=&quot;Quote&quot; msdata:Caption=&quot;&quot; type=&quot;xs:string&quot; minOccurs=&quot;0&quot; /&gt;&#xA;              &lt;/xs:sequence&gt;&#xA;            &lt;/xs:complexType&gt;&#xA;          &lt;/xs:element&gt;&#xA;        &lt;/xs:choice&gt;&#xA;      &lt;/xs:complexType&gt;&#xA;    &lt;/xs:element&gt;&#xA;  &lt;/xs:schema&gt;&#xA;&lt;/NewDataSet&gt;" />
+      <uga:DownloadFileConnections ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" File="{x:Null}" ManualEntryFileId="{x:Null}" ManualFileId="{x:Null}" Result="{x:Null}" AuthScopesInvalid="False" BrowserFileId="https://docs.google.com/document/d/1Uh8RjXDZSiSr8u0GvzgdDFdz2YNdT6EJooldgQTuif0/edit?usp=drivesdk" ConnectionId="1922d07f-e22c-4493-8d0f-9a54bb399c8d" DisplayName="Download File" DownloadDocumentAs="[UiPath.GSuite.Activities.Drive.Enums.EGDocExportFormat.Pdf]" DownloadDrawingAs="Jpeg" DownloadPresentationAs="Ppt" DownloadSpreadsheetAs="Xlsx" FileFriendlyName="Product Team Updates" FileInputMode="Browse" sap:VirtualizedContainerService.HintSize="722,192" sap2010:WorkflowViewState.IdRef="DownloadFileConnections_4" NewResult="[Meeting_notes]" UseConnectionService="True">
         <uga:DownloadFileConnections.FileIdBackup>
           <usau:BackupSlot x:TypeArguments="ugade:EDriveItemMode" StoredValue="Browse">
             <usau:BackupSlot.BackupValues>
@@ -216,7 +219,7 @@
           </scg:Dictionary>
         </sap:WorkflowViewStateService.ViewState>
       </uga:DownloadFileConnections>
-      <Assign sap:VirtualizedContainerService.HintSize="722,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_13">
+      <Assign sap:VirtualizedContainerService.HintSize="722,122" sap2010:WorkflowViewState.IdRef="Assign_13">
         <Assign.To>
           <OutArgument x:TypeArguments="x:String">[downloadFilePath]</OutArgument>
         </Assign.To>
@@ -224,12 +227,12 @@
           <InArgument x:TypeArguments="x:String">["SavedDownloadedFile\ "+Meeting_notes.FullName]</InArgument>
         </Assign.Value>
       </Assign>
-      <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[downloadFilePath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="722,164.66666666666666" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[Meeting_notes.LocalPath]" />
-      <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="722,108" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_3" Taxonomy="[taxonomy]" />
-      <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="722,307.3333333333333" sap2010:WorkflowViewState.IdRef="DigitizeDocument_2">
+      <ui:MoveFile ContinueOnError="{x:Null}" DestinationResource="{x:Null}" PathResource="{x:Null}" Destination="[downloadFilePath]" DisplayName="Move File" sap:VirtualizedContainerService.HintSize="722,199" sap2010:WorkflowViewState.IdRef="MoveFile_2" Overwrite="True" Path="[Meeting_notes.LocalPath]" />
+      <p:LoadTaxonomy DisplayName="Load Taxonomy" sap:VirtualizedContainerService.HintSize="722,144" sap2010:WorkflowViewState.IdRef="LoadTaxonomy_3" Taxonomy="[taxonomy]" />
+      <p:DigitizeDocument ApplyOcrMigrated="True" ApplyOcrOnPdf="Auto" DegreeOfParallelism="-1" DetectCheckboxes="True" DisplayName="Digitize Document" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" ForceApplyOCR="False" sap:VirtualizedContainerService.HintSize="722,337" sap2010:WorkflowViewState.IdRef="DigitizeDocument_2">
         <p:DigitizeDocument.OCREngine>
           <ActivityFunc x:TypeArguments="sd:Image, x:String, scg:IEnumerable(scg:KeyValuePair(sd1:Rectangle, x:String))" Argument1="{x:Reference __ReferenceID0}" Argument2="{x:Reference __ReferenceID1}">
-            <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="+uYqY2nU6KSGnePl28V2ccU5o0RipeKCtVaDK6YVvwd52gkbk4a7G/iE+LGosRublnFUn59WyCjW/5eFUgoMkA==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25.333333333333332" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000">
+            <p1:UiPathDocumentOCR Endpoint="{x:Null}" Output="{x:Null}" Text="{x:Null}" UseLocalServer="{x:Null}" ApiKey="+uYqY2nU6KSGnePl28V2ccU5o0RipeKCtVaDK6YVvwd52gkbk4a7G/iE+LGosRublnFUn59WyCjW/5eFUgoMkA==" ComputeSkewAngle="False" DisplayName="UiPath Document OCR" ExtractWords="True" sap:VirtualizedContainerService.HintSize="312,25" sap2010:WorkflowViewState.IdRef="UiPathDocumentOCR_1" Language="auto" NoopExecution="False" Profile="None" Scale="1" Timeout="100000">
               <p1:UiPathDocumentOCR.Image>
                 <InArgument x:TypeArguments="sd:Image">
                   <DelegateArgumentValue x:TypeArguments="sd:Image" sap2010:WorkflowViewState.IdRef="DelegateArgumentValue`1_1">
@@ -248,9 +251,9 @@
           </ActivityFunc>
         </p:DigitizeDocument.OCREngine>
       </p:DigitizeDocument>
-      <p2:ClassifyDocumentScope ClassificationResults="[classificationResult]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" sap:VirtualizedContainerService.HintSize="722,450" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.Productupdates&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:[]}}">
+      <p2:ClassifyDocumentScope ClassificationResults="[classificationResult]" DisplayName="Classify Document Scope" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" sap:VirtualizedContainerService.HintSize="722,500" sap2010:WorkflowViewState.IdRef="ClassifyDocumentScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates&quot;:{&quot;OriginalDocumentTypeId&quot;:&quot;NoGroup.NoCategory.Productupdates&quot;,&quot;ClassifierDocumentTypeId&quot;:null,&quot;IsDocumentTypeIdMapped&quot;:true}}}},&quot;ClassifierMinimumConfidence&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:&quot;0&quot;},&quot;DocumentTypesByPersistenceId&quot;:{&quot;UIb7673cce10d24c3e9cde67d39ab300bc&quot;:[]}}">
         <p2:ClassifyDocumentScope.Classifiers>
-          <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="234,116" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="DocumentProcessing\Keyword.json" PersistenceId="UIb7673cce10d24c3e9cde67d39ab300bc">
+          <p2:KeywordBasedClassifier HumanValidatedData="{x:Null}" LearningData="{x:Null}" DisplayName="Keyword Based Classifier" sap:VirtualizedContainerService.HintSize="223,138" sap2010:WorkflowViewState.IdRef="KeywordBasedClassifier_1" LearningFilePath="DocumentProcessing\Keyword.json" PersistenceId="UIb7673cce10d24c3e9cde67d39ab300bc">
             <p2:KeywordBasedClassifier.ClassifierResult>
               <OutArgument x:TypeArguments="p3:ClassifierResult">
                 <DelegateArgumentReference x:TypeArguments="p3:ClassifierResult">
@@ -296,13 +299,13 @@
           </p2:KeywordBasedClassifier>
         </p2:ClassifyDocumentScope.Classifiers>
       </p2:ClassifyDocumentScope>
-      <p5:DataExtractionScope DocumentTypeId="{x:Null}" ClassificationResult="[classificationResult(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" ExtractionResult="[extractionResults]" FormatValuesIfPossible="True" sap:VirtualizedContainerService.HintSize="722,500" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates&quot;:{&quot;FieldMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates.MobileDevelopmentPilotNucamp&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.MobileDevelopmentPilotNucamp&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Cybersecurity&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersecurity&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Mini-Apps&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Mini-Apps&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Soft-Skills&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Soft-Skills&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Q1_2024&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Q1_2024&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Ssoft_skills_Strategy-linkendIn&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Ssoft_skills_Strategy-linkendIn&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Strategy_pilot&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_pilot&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Strategy_1-roadmap&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_1-roadmap&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Strategy_2-grade_weighting&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_2-grade_weighting&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Skills_&amp;_employability&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Skills_&amp;_employability&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Learnings&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Learnings&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.LaunchoftheSDMobileCourse&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.LaunchoftheSDMobileCourse&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Mpesa_Africa_Mini_Apps_Delivery&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Mpesa_Africa_Mini_Apps_Delivery&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Product_planning&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Product_planning&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.AI&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.AI&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Digital_marketing&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Digital_marketing&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Product_Management&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Product_Management&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Analyst&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Analyst&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:[]}}">
+      <p5:DataExtractionScope DocumentTypeId="{x:Null}" ApplyGenerativeValidation="False" ClassificationResult="[classificationResult(0)]" DisplayName="Data Extraction Scope" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" ExtractionResult="[extractionResults]" FormatValuesIfPossible="True" GenerativeValidationConfidenceThreshold="99" sap:VirtualizedContainerService.HintSize="722,548" sap2010:WorkflowViewState.IdRef="DataExtractionScope_2" Taxonomy="[taxonomy]" TaxonomyConfiguration="{}{&quot;TaxonomyMappings&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:{&quot;DocumentTypeMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates&quot;:{&quot;FieldMappings&quot;:{&quot;NoGroup.NoCategory.Productupdates.SD_Flatiron&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.SD_Flatiron&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Skills_pathway&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Skills_pathway&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.SD_mobile&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.SD_mobile&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Mpesa_mini_apps&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Mpesa_mini_apps&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Soft_skills&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Soft_skills&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.DS_updates&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.DS_updates&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Cybersec_prep&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersec_prep&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Cybersec_analyst&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersec_analyst&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true},&quot;NoGroup.NoCategory.Productupdates.Quote&quot;:{&quot;OriginalTaxonomyFieldId&quot;:&quot;NoGroup.NoCategory.Productupdates.Quote&quot;,&quot;ExtractorTaxonomyFieldId&quot;:null,&quot;ShouldExtract&quot;:true}},&quot;ExtractorDocumentTypeId&quot;:null}}}},&quot;ExtractorMinimumConfidence&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:&quot;0&quot;},&quot;ExtractorsAliases&quot;:{},&quot;DocumentTypeOptionsByExtractor&quot;:{&quot;UI5f69a4da9700424999dfe029d0ea606d&quot;:[]}}">
         <p5:DataExtractionScope.Extractors>
-          <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="yEAEa9NXMTkCZjCLcr45ayHPm6p0baJPI44OGqRREOciNQkWU5wKzbrKiRl0w5VeahlQJPF78w9qdgmKLOqfMA==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="234,166" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UI5f69a4da9700424999dfe029d0ea606d" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.Productupdates&quot;,&quot;FormId&quot;:&quot;4d702ff0&quot;,&quot;FormName&quot;:&quot;Product Team Updates&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Product&quot;,&quot;Box&quot;:[55.58,72.0,131.0,47.99]},{&quot;Text&quot;:&quot;Team&quot;,&quot;Box&quot;:[55.58,212.76,90.32,47.99]},{&quot;Text&quot;:&quot;Updates&quot;,&quot;Box&quot;:[55.58,312.84,140.18,47.99]},{&quot;Text&quot;:&quot;In&quot;,&quot;Box&quot;:[110.48,133.28,13.87,21.33]},{&quot;Text&quot;:&quot;Product&quot;,&quot;Box&quot;:[110.48,151.49,58.21,21.33]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.MobileDevelopmentPilotNucamp&quot;,&quot;Box&quot;:[153.9601,58.6515,536.2418,121.4923]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersecurity&quot;,&quot;Box&quot;:[293.2573,61.7935,549.8573,120.4449]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Mini-Apps&quot;,&quot;Box&quot;:[444.0753,49.2253,560.3308,97.4033]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Soft-Skills&quot;,&quot;Box&quot;:[618.9823,46.0833,565.5676,122.5396]}],&quot;Tables&quot;:[]},{&quot;Page&quot;:1,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Q1&quot;,&quot;Box&quot;:[77.04,83.9,15.03,14.56]},{&quot;Text&quot;:&quot;2024&quot;,&quot;Box&quot;:[77.04,114.32,26.39,14.56]},{&quot;Text&quot;:&quot;February&quot;,&quot;Box&quot;:[280.48,72.0,66.42,21.33]},{&quot;Text&quot;:&quot;(Priorities)&quot;,&quot;Box&quot;:[280.48,142.75,78.54,21.33]},{&quot;Text&quot;:&quot;Delivery&quot;,&quot;Box&quot;:[399.46,196.34,42.71,14.66]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Q1_2024&quot;,&quot;Box&quot;:[71.2196,47.1306,563.4729,23.0416]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Ssoft_skills_Strategy-linkendIn&quot;,&quot;Box&quot;:[99.498,105.7821,502.7267,13.6155]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_pilot&quot;,&quot;Box&quot;:[116.2556,99.498,445.1226,10.4735]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_1-roadmap&quot;,&quot;Box&quot;:[130.9184,138.2498,470.259,32.4678]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Strategy_2-grade_weighting&quot;,&quot;Box&quot;:[169.6703,136.1552,475.4957,31.4204]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Skills_&amp;_employability&quot;,&quot;Box&quot;:[207.3748,139.2972,469.2116,16.7576]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Learnings&quot;,&quot;Box&quot;:[227.2744,138.2498,473.401,37.7045]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.LaunchoftheSDMobileCourse&quot;,&quot;Box&quot;:[327.8197,59.6988,551.952,65.9829]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Mpesa_Africa_Mini_Apps_Delivery&quot;,&quot;Box&quot;:[415.7969,53.4147,558.2361,45.0359]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Product_planning&quot;,&quot;Box&quot;:[477.5904,59.6988,551.952,35.6098]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.AI&quot;,&quot;Box&quot;:[518.4369,142.4392,469.2116,15.7102]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;,&quot;Box&quot;:[538.3365,137.2025,474.4483,16.7576]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Digital_marketing&quot;,&quot;Box&quot;:[560.3308,136.1552,475.4957,13.6155]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Product_Management&quot;,&quot;Box&quot;:[579.1831,137.2025,474.4483,13.6155]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Analyst&quot;,&quot;Box&quot;:[598.0353,139.2972,467.1169,17.8049]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
+          <p5:FormExtractor SerializedSignatureFields="{x:Null}" ApiKey="yEAEa9NXMTkCZjCLcr45ayHPm6p0baJPI44OGqRREOciNQkWU5wKzbrKiRl0w5VeahlQJPF78w9qdgmKLOqfMA==" DisplayName="Form Extractor" Endpoint="https://du.uipath.com/svc/formextractor" sap:VirtualizedContainerService.HintSize="223,186" sap2010:WorkflowViewState.IdRef="FormExtractor_1" MinOverlapPercentage="65" PersistenceId="UI5f69a4da9700424999dfe029d0ea606d" SendDocumentsForAlgorithmImprovements="True" SerializedSettings="{}{}" SerializedTemplates="[{&quot;DocumentTypeId&quot;:&quot;NoGroup.NoCategory.Productupdates&quot;,&quot;FormId&quot;:&quot;0c858d37&quot;,&quot;FormName&quot;:&quot;Product  Team Updates&quot;,&quot;OriginalFileExtension&quot;:&quot;pdf&quot;,&quot;Pages&quot;:[{&quot;Page&quot;:0,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;Product&quot;,&quot;Box&quot;:[55.58,72.0,131.0,47.99]},{&quot;Text&quot;:&quot;Team&quot;,&quot;Box&quot;:[55.58,212.76,90.32,47.99]},{&quot;Text&quot;:&quot;Updates&quot;,&quot;Box&quot;:[55.58,312.84,140.18,47.99]},{&quot;Text&quot;:&quot;February&quot;,&quot;Box&quot;:[110.48,72.0,66.42,21.33]},{&quot;Text&quot;:&quot;In&quot;,&quot;Box&quot;:[110.48,142.75,13.87,21.33]},{&quot;Text&quot;:&quot;Product&quot;,&quot;Box&quot;:[110.48,160.95,58.21,21.33]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.SD_Flatiron&quot;,&quot;Box&quot;:[147.4364,66.7636,535.0364,64.9091]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Skills_pathway&quot;,&quot;Box&quot;:[237.3818,64.9091,532.2545,92.7273]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.SD_mobile&quot;,&quot;Box&quot;:[365.3455,69.5455,521.1273,74.1818]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Mpesa_mini_apps&quot;,&quot;Box&quot;:[497.9455,63.9818,517.4182,71.4]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Soft_skills&quot;,&quot;Box&quot;:[604.5818,66.7636,508.1455,100.1455]}],&quot;Tables&quot;:[]},{&quot;Page&quot;:1,&quot;Size&quot;:[0.0,0.0,612.0,792.0],&quot;SkewAngle&quot;:0.0,&quot;Evidence&quot;:[{&quot;Text&quot;:&quot;March&quot;,&quot;Box&quot;:[94.48,72.0,45.69,21.33]},{&quot;Text&quot;:&quot;Priorities&quot;,&quot;Box&quot;:[94.48,122.02,67.09,21.33]},{&quot;Text&quot;:&quot;Spotlight&quot;,&quot;Box&quot;:[512.98,72.0,69.52,21.33]},{&quot;Text&quot;:&quot;Quote&quot;,&quot;Box&quot;:[647.86,72.0,34.27,16.0]},{&quot;Text&quot;:&quot;of&quot;,&quot;Box&quot;:[647.86,109.52,11.22,16.0]},{&quot;Text&quot;:&quot;the&quot;,&quot;Box&quot;:[647.86,124.0,18.29,16.0]},{&quot;Text&quot;:&quot;Month&quot;,&quot;Box&quot;:[647.86,145.54,36.13,16.0]}],&quot;Fields&quot;:[{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.DS_updates&quot;,&quot;Box&quot;:[129.8182,67.6909,492.3818,74.1818]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersec_prep&quot;,&quot;Box&quot;:[233.6727,67.6909,522.9818,101.0727]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Cybersec_analyst&quot;,&quot;Box&quot;:[356.0727,65.8364,522.0545,96.4364]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Data_analytics&quot;,&quot;Box&quot;:[548.0182,64.9091,514.6364,74.1818]},{&quot;Field&quot;:&quot;NoGroup.NoCategory.Productupdates.Quote&quot;,&quot;Box&quot;:[663.9273,65.8364,508.1455,49.1455]}],&quot;Tables&quot;:[]}],&quot;AnchorBasedConfiguration&quot;:{&quot;AnchorBasedFieldConfiguration&quot;:[]}}]" Timeout="100000">
             <p5:FormExtractor.DocumentBounds>
-              <InArgument x:TypeArguments="p6:ResultsDocumentBounds">
-                <DelegateArgumentValue x:TypeArguments="p6:ResultsDocumentBounds">
-                  <DelegateInArgument x:TypeArguments="p6:ResultsDocumentBounds" Name="DocumentBounds" />
+              <InArgument x:TypeArguments="p7:ResultsDocumentBounds">
+                <DelegateArgumentValue x:TypeArguments="p7:ResultsDocumentBounds">
+                  <DelegateInArgument x:TypeArguments="p7:ResultsDocumentBounds" Name="DocumentBounds" />
                 </DelegateArgumentValue>
               </InArgument>
             </p5:FormExtractor.DocumentBounds>
@@ -328,16 +331,16 @@
               </InArgument>
             </p5:FormExtractor.DocumentText>
             <p5:FormExtractor.ExtractorDocumentType>
-              <InArgument x:TypeArguments="p7:ExtractorDocumentType">
-                <DelegateArgumentValue x:TypeArguments="p7:ExtractorDocumentType">
-                  <DelegateInArgument x:TypeArguments="p7:ExtractorDocumentType" Name="ExtractorDocumentType" />
+              <InArgument x:TypeArguments="p6:ExtractorDocumentType">
+                <DelegateArgumentValue x:TypeArguments="p6:ExtractorDocumentType">
+                  <DelegateInArgument x:TypeArguments="p6:ExtractorDocumentType" Name="ExtractorDocumentType" />
                 </DelegateArgumentValue>
               </InArgument>
             </p5:FormExtractor.ExtractorDocumentType>
             <p5:FormExtractor.ExtractorResult>
-              <OutArgument x:TypeArguments="p7:ExtractorResult">
-                <DelegateArgumentReference x:TypeArguments="p7:ExtractorResult">
-                  <DelegateOutArgument x:TypeArguments="p7:ExtractorResult" Name="ExtractorResult" />
+              <OutArgument x:TypeArguments="p6:ExtractorResult">
+                <DelegateArgumentReference x:TypeArguments="p6:ExtractorResult">
+                  <DelegateOutArgument x:TypeArguments="p6:ExtractorResult" Name="ExtractorResult" />
                 </DelegateArgumentReference>
               </OutArgument>
             </p5:FormExtractor.ExtractorResult>
@@ -351,41 +354,41 @@
           </p5:FormExtractor>
         </p5:DataExtractionScope.Extractors>
       </p5:DataExtractionScope>
-      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="722,572.6666666666666" sap2010:WorkflowViewState.IdRef="CommentOut_31">
+      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="722,593" sap2010:WorkflowViewState.IdRef="CommentOut_38">
         <ui:CommentOut.Body>
-          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="450,492.6666666666667" sap2010:WorkflowViewState.IdRef="Sequence_47">
+          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,474" sap2010:WorkflowViewState.IdRef="Sequence_54">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <p:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[extractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" sap:VirtualizedContainerService.HintSize="388,382" sap2010:WorkflowViewState.IdRef="PresentValidationStation_5" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]" ValidatedExtractionResults="[validatedExtractionResults]" />
+            <p:PresentValidationStation FieldsValidationConfidence="{x:Null}" AutomaticExtractionResults="[extractionResults]" DisplayName="Present Validation Station" DocumentObjectModel="[DOM]" DocumentPath="[downloadFilePath]" DocumentText="[document_text]" sap:VirtualizedContainerService.HintSize="354,389" sap2010:WorkflowViewState.IdRef="PresentValidationStation_6" ShowOnlyRelevantPageRange="False" Taxonomy="[taxonomy]" ValidatedExtractionResults="[validatedExtractionResults]" />
           </Sequence>
         </ui:CommentOut.Body>
       </ui:CommentOut>
-      <p5:ExportExtractionResults DataSet="[dataSet]" DisplayName="Export Extraction Results" ExtractionResult="[extractionResults]" sap:VirtualizedContainerService.HintSize="722,182" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_4" IncludeConfidence="False" IncludeOCRConfidence="False" />
-      <ui:MergeDataTable Destination="[DT1]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="722,136.66666666666666" sap2010:WorkflowViewState.IdRef="MergeDataTable_3" MissingSchemaAction="Error" Source="[dataSet.Tables(0)]" />
-      <ui:WriteRange AddHeaders="True" DataTable="[DT1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="722,116" sap2010:WorkflowViewState.IdRef="WriteRange_3" SheetName="Sheet1" StartingCell="A1" WorkbookPath="documentExtractionResults.xlsx" />
-      <ui:ReadTextFile File="{x:Null}" Content="[EmailTemplate]" DisplayName="Read Text File" FileName="EmailTemplate.html" sap:VirtualizedContainerService.HintSize="722,82" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
-      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="722,4059.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_3">
+      <p5:ExportExtractionResults DataSet="[dataSet]" DisplayName="Export Extraction Results" ExtractionResult="[extractionResults]" sap:VirtualizedContainerService.HintSize="722,214" sap2010:WorkflowViewState.IdRef="ExportExtractionResults_5" IncludeConfidence="False" IncludeOCRConfidence="False" />
+      <ui:MergeDataTable Destination="[DT1]" DisplayName="Merge Data Table" sap:VirtualizedContainerService.HintSize="722,173" sap2010:WorkflowViewState.IdRef="MergeDataTable_4" MissingSchemaAction="Error" Source="[dataSet.Tables(0)]" />
+      <ui:WriteRange AddHeaders="True" DataTable="[DT1]" DisplayName="Write Range Workbook" sap:VirtualizedContainerService.HintSize="722,156" sap2010:WorkflowViewState.IdRef="WriteRange_4" SheetName="Sheet1" StartingCell="A1" WorkbookPath="documentExtractionResults.xlsx" />
+      <ui:ReadTextFile File="{x:Null}" Content="[EmailTemplate]" DisplayName="Read Text File" FileName="EmailTemplate.html" sap:VirtualizedContainerService.HintSize="722,120" sap2010:WorkflowViewState.IdRef="ReadTextFile_1" />
+      <ueab:ExcelProcessScopeX DisplayAlerts="{x:Null}" ExistingProcessAction="{x:Null}" FileConflictResolution="{x:Null}" LaunchMethod="{x:Null}" LaunchTimeout="{x:Null}" MacroSettings="{x:Null}" ProcessMode="{x:Null}" ShowExcelWindow="{x:Null}" DisplayName="Excel Process Scope" sap:VirtualizedContainerService.HintSize="722,5992" sap2010:WorkflowViewState.IdRef="ExcelProcessScopeX_4">
         <ueab:ExcelProcessScopeX.Body>
           <ActivityAction x:TypeArguments="ui:IExcelProcess">
             <ActivityAction.Argument>
               <DelegateInArgument x:TypeArguments="ui:IExcelProcess" Name="ExcelProcessScopeTag" />
             </ActivityAction.Argument>
-            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,3972" sap2010:WorkflowViewState.IdRef="Sequence_28">
+            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="688,5882" sap2010:WorkflowViewState.IdRef="Sequence_28">
               <sap:WorkflowViewStateService.ViewState>
                 <scg:Dictionary x:TypeArguments="x:String, x:Object">
                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                 </scg:Dictionary>
               </sap:WorkflowViewStateService.ViewState>
-              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="626,3861.3333333333335" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="documentExtractionResults.xlsx">
+              <ueab:ExcelApplicationCard Password="{x:Null}" ReadFormatting="{x:Null}" DisplayName="Use Excel File" sap:VirtualizedContainerService.HintSize="626,5797" sap2010:WorkflowViewState.IdRef="ExcelApplicationCard_2" ResizeWindow="None" WorkbookPath="documentExtractionResults.xlsx">
                 <ueab:ExcelApplicationCard.Body>
                   <ActivityAction x:TypeArguments="ue:IWorkbookQuickHandle">
                     <ActivityAction.Argument>
                       <DelegateInArgument x:TypeArguments="ue:IWorkbookQuickHandle" Name="Excel" />
                     </ActivityAction.Argument>
-                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,3580.6666666666665" sap2010:WorkflowViewState.IdRef="Sequence_29">
+                    <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="592,5505" sap2010:WorkflowViewState.IdRef="Sequence_29">
                       <Sequence.Variables>
                         <Variable x:TypeArguments="x:String" Name="Strategy_grade_weightin" />
                         <Variable x:TypeArguments="x:String" Name="Skills_employability" />
@@ -399,166 +402,223 @@
                         <Variable x:TypeArguments="x:String" Name="Digital_marketing" />
                         <Variable x:TypeArguments="x:String" Name="Product_management" />
                         <Variable x:TypeArguments="x:String" Name="Analyst" />
+                        <Variable x:TypeArguments="x:String" Name="SD_Flatiron" />
+                        <Variable x:TypeArguments="x:String" Name="Skills_pathway" />
+                        <Variable x:TypeArguments="x:String" Name="SD_mobile" />
+                        <Variable x:TypeArguments="x:String" Name="Mpesa_mini_apps" />
+                        <Variable x:TypeArguments="x:String" Name="Soft_skills" />
+                        <Variable x:TypeArguments="x:String" Name="DS_updates" />
+                        <Variable x:TypeArguments="x:String" Name="Cybersec_prep" />
+                        <Variable x:TypeArguments="x:String" Name="Cybersec_analyst" />
+                        <Variable x:TypeArguments="x:String" Name="Quote" />
                       </Sequence.Variables>
                       <sap:WorkflowViewStateService.ViewState>
                         <scg:Dictionary x:TypeArguments="x:String, x:Object">
                           <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                         </scg:Dictionary>
                       </sap:WorkflowViewStateService.ViewState>
-                      <ueab:ReadRangeX DisplayName="Read Range" HasHeaders="False" sap:VirtualizedContainerService.HintSize="530,174.66666666666666" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A:E&quot;)]" SaveTo="[DT2]" />
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_4">
+                      <ueab:ReadRangeX DisplayName="Read Range" HasHeaders="False" sap:VirtualizedContainerService.HintSize="530,209" sap2010:WorkflowViewState.IdRef="ReadRangeX_2" Range="[Excel.Sheet(&quot;Sheet1&quot;).Range(&quot;A:E&quot;)]" SaveTo="[DT2]" />
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_4">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Cybersecurity]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[SD_Flatiron]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("A2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_5">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_39">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_55">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_1" Text="[SD_Flatiron]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_5">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Mini_Apps]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Skills_pathway]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("B2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_6">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_40">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_56">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_2" Text="[Skills_pathway]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_6">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Soft_Skills]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[SD_mobile]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("C2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_14">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_41">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_57">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_3" Text="[SD_mobile]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_14">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Q1_2024]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Mpesa_mini_apps]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("D2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_15">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_42">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_58">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_4" Text="[Mpesa_mini_apps]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_15">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Soft_skills_Strategy_linkendIn]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Soft_skills]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("E2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_16">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_43">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_59">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_5" Text="[Soft_skills]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_16">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Strategy_pilot]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[DS_updates]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("F2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_17">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_44">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_60">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_6" Text="[DS_updates]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_17">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Strategy_roadmap]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Cybersec_prep]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("G2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_18">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_45">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_61">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_7" Text="[Cybersec_prep]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_18">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Strategy_grade_weightin]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Cybersec_analyst]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("H2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_19">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_46">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_62">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_8" Text="[Cybersec_analyst]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_19">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Skills_employability]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Data_analytics]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("I2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_20">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_47">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_63">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_9" Text="[Data_analytics]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <Assign sap:VirtualizedContainerService.HintSize="530,122" sap2010:WorkflowViewState.IdRef="Assign_20">
                         <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Learnings]</OutArgument>
+                          <OutArgument x:TypeArguments="x:String">[Quote]</OutArgument>
                         </Assign.To>
                         <Assign.Value>
                           <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("J2")]</InArgument>
                         </Assign.Value>
                       </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_21">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Mobile_Development_Pilot_Nucamp]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("K2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_22">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Launch_of_the_SD_Mobile_Course]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("L2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_23">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Mpesa_Africa_Mini_Apps_Delivery]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("M2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_24">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Product_planning]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("N2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_25">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[AI]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("O2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_26">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Data_analytics]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("P2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_27">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Digital_marketing]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("Q2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_28">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Product_management]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("R2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <Assign sap:VirtualizedContainerService.HintSize="530,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_29">
-                        <Assign.To>
-                          <OutArgument x:TypeArguments="x:String">[Analyst]</OutArgument>
-                        </Assign.To>
-                        <Assign.Value>
-                          <InArgument x:TypeArguments="x:String">[Excel.Sheet("Sheet1").Cell("R2")]</InArgument>
-                        </Assign.Value>
-                      </Assign>
-                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,874" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_2" Range="[Excel.Sheet(&quot;EmailList&quot;)]" SaveAfterEachRow="False">
+                      <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="530,312" sap2010:WorkflowViewState.IdRef="CommentOut_48">
+                        <ui:CommentOut.Body>
+                          <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,193" sap2010:WorkflowViewState.IdRef="Sequence_64">
+                            <sap:WorkflowViewStateService.ViewState>
+                              <scg:Dictionary x:TypeArguments="x:String, x:Object">
+                                <x:Boolean x:Key="IsExpanded">True</x:Boolean>
+                              </scg:Dictionary>
+                            </sap:WorkflowViewStateService.ViewState>
+                            <ui:MessageBox Caption="{x:Null}" ChosenButton="{x:Null}" AutoCloseAfter="00:00:00" DisplayName="Message Box" sap:VirtualizedContainerService.HintSize="354,108" sap2010:WorkflowViewState.IdRef="MessageBox_10" Text="[Quote]" />
+                          </Sequence>
+                        </ui:CommentOut.Body>
+                      </ui:CommentOut>
+                      <ueab:ExcelForEachRowX DisplayName="For Each Excel Row" EmptyRowBehavior="Stop" HasHeaders="True" sap:VirtualizedContainerService.HintSize="530,871" sap2010:WorkflowViewState.IdRef="ExcelForEachRowX_3" Range="[Excel.Sheet(&quot;EmailList&quot;)]" SaveAfterEachRow="False">
                         <ueab:ExcelForEachRowX.Body>
                           <ActivityAction x:TypeArguments="ue:CurrentRowQuickHandle, x:Int32">
                             <ActivityAction.Argument1>
@@ -567,7 +627,7 @@
                             <ActivityAction.Argument2>
                               <DelegateInArgument x:TypeArguments="x:Int32" Name="CurrentIndex" />
                             </ActivityAction.Argument2>
-                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,676" sap2010:WorkflowViewState.IdRef="Sequence_46">
+                            <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="496,658" sap2010:WorkflowViewState.IdRef="Sequence_46">
                               <Sequence.Variables>
                                 <Variable x:TypeArguments="x:String" Name="Name" />
                                 <Variable x:TypeArguments="x:String" Name="Email" />
@@ -577,7 +637,7 @@
                                   <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                                 </scg:Dictionary>
                               </sap:WorkflowViewStateService.ViewState>
-                              <Assign sap:VirtualizedContainerService.HintSize="434,85.33333333333333" sap2010:WorkflowViewState.IdRef="Assign_12">
+                              <Assign sap:VirtualizedContainerService.HintSize="434,122" sap2010:WorkflowViewState.IdRef="Assign_12">
                                 <Assign.To>
                                   <OutArgument x:TypeArguments="x:String">[Email]</OutArgument>
                                 </Assign.To>
@@ -585,7 +645,7 @@
                                   <InArgument x:TypeArguments="x:String">[CurrentRow.ByField("Email").ToString]</InArgument>
                                 </Assign.Value>
                               </Assign>
-                              <uga:SendEmailConnections ArgumentAttachments="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[EmailTemplate.Replace(&quot;Replace_cybersecurity&quot;, Cybersecurity).&#xD;&#xA;Replace(&quot;Replace_Mini_Apps&quot;, Mini_Apps).&#xD;&#xA;Replace(&quot;Replace_soft-skills&quot;, Soft_Skills).&#xD;&#xA;Replace(&quot;Replace_Q1_2024&quot;, Q1_2024).&#xD;&#xA;Replace(&quot;Replace_Soft_skills_Strategy-linkendIn&quot;, Soft_skills_Strategy_linkendIn).&#xD;&#xA;Replace(&quot;Replace_Strategy_pilot&quot;, Strategy_pilot).&#xD;&#xA;Replace(&quot;Replace_Strategy_1-roadmap&quot;, Strategy_roadmap).&#xD;&#xA;Replace(&quot;Replace_Strategy_2-grade_weighting&quot;, Strategy_grade_weightin).&#xD;&#xA;Replace(&quot;Replace_Skills_&amp;_employability&quot;, Skills_employability).&#xD;&#xA;Replace(&quot;Replace_Learnings&quot;, Learnings).&#xD;&#xA;Replace(&quot;Replace_Mobile Development Pilot:Nucamp&quot;, Mobile_Development_Pilot_Nucamp).&#xD;&#xA;Replace(&quot;Replace_Launch of the SD Mobile Course&quot;, Launch_of_the_SD_Mobile_Course).&#xD;&#xA;Replace(&quot;Replace_Mpesa_Africa_Mini_Apps_Deliver&quot;, Mpesa_Africa_Mini_Apps_Delivery).&#xD;&#xA;Replace(&quot;Replace_Product_planning&quot;, Product_planning).&#xD;&#xA;Replace(&quot;Replace_AI&quot;, AI).&#xD;&#xA;Replace(&quot;Replace_Data_analytics&quot;, Data_analytics).&#xD;&#xA;Replace(&quot;Replace_Digital_marketing &quot;, Digital_marketing ).&#xD;&#xA;Replace(&quot;Replace_Product_Management&quot;, Product_Management).&#xD;&#xA;Replace(&quot;Replace_Analyst&quot;, Analyst).&#xD;&#xA;Replace(&quot;replace0&quot;, CurrentRow.ByField(&quot;Name&quot;).ToString).&#xD;&#xA;Replace(&quot;replace_email&quot;, CurrentRow.ByField(&quot;Email&quot;).ToString)]" ConnectionId="0fa295a1-b567-4a98-9251-e77d12c86d2a" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,440" sap2010:WorkflowViewState.IdRef="SendEmailConnections_10" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Product Team Monthly Brief" To="[New String(){Email}]" UseConnectionService="True">
+                              <uga:SendEmailConnections ArgumentAttachmentPaths="{x:Null}" ArgumentAttachments="{x:Null}" AttachmentPaths="{x:Null}" Bcc="{x:Null}" Cc="{x:Null}" ConnectionAccountName="{x:Null}" ContinueOnError="{x:Null}" ReplyTo="{x:Null}" SingleAttachment="{x:Null}" TextBody="{x:Null}" AttachmentInputMode="UseExisting" AuthScopesInvalid="False" Body="[EmailTemplate.Replace(&quot;Replace_SD_mobile&quot;, SD_mobile).&#xA;Replace(&quot;Replace_Soft_skills&quot;, Soft_skills).&#xA;Replace(&quot;Replace_SD_Flatiron&quot;, SD_Flatiron).&#xA;Replace(&quot;Replace_Skills_pathway&quot;, Skills_pathway).&#xA;Replace(&quot;Replace_Mpesa_mini_apps&quot;, Mpesa_mini_apps).&#xA;Replace(&quot;Replace_DS_updates&quot;, DS_updates).&#xA;Replace(&quot;Replace_Cybersec_prep&quot;, Cybersec_prep).&#xA;Replace(&quot;Replace_Cybersec_analyst&quot;, Cybersec_analyst).&#xA;Replace(&quot;Replace_Data_analytics&quot;, Data_analytics).&#xA;Replace(&quot;replace0&quot;, CurrentRow.ByField(&quot;Name&quot;).ToString).&#xA;Replace(&quot;replace_email&quot;, CurrentRow.ByField(&quot;Email&quot;).ToString)]" ConnectionId="0fa295a1-b567-4a98-9251-e77d12c86d2a" DisplayName="Send Email" sap:VirtualizedContainerService.HintSize="434,451" sap2010:WorkflowViewState.IdRef="SendEmailConnections_10" Importance="Normal" InputType="HTML" SaveAsDraft="False" Subject="Product Team Monthly Brief" To="[New String(){Email}]" UseConnectionService="True">
                                 <uga:SendEmailConnections.Attachments>
                                   <InArgument x:TypeArguments="scg:IEnumerable(upr:IResource)" />
                                 </uga:SendEmailConnections.Attachments>

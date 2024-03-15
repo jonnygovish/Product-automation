@@ -1,0 +1,45 @@
+{
+  "DisplayName": "Main",
+  "Tooltip": null,
+  "HelpLink": null,
+  "Color": null,
+  "OriginalIconFileName": null,
+  "Arguments": [
+    {
+      "Name": "DownloadFileConnections_4_Connection0",
+      "DisplayName": "DownloadFileConnections_4_Connection",
+      "Category": null,
+      "Tooltip": "Download File",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "DownloadFileConnections_4_Connection0_Property0_Metadata",
+      "DisplayName": "DownloadFileConnections_4_File to download",
+      "Category": null,
+      "Tooltip": "Download File",
+      "Placeholder": null,
+      "Widget": null,
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 2,
+      "DataSourceItems": null
+    },
+    {
+      "Name": "SendEmailConnections_10_Connection1",
+      "DisplayName": "SendEmailConnections_10_Connection",
+      "Category": null,
+      "Tooltip": "Send Email",
+      "Placeholder": null,
+      "Widget": "Connection",
+      "IsRequired": true,
+      "IsPrincipal": true,
+      "ArgumentType": 1,
+      "DataSourceItems": null
+    }
+  ]
+}
